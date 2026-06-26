@@ -3,7 +3,7 @@ Healthcare analytics project using SQL and Tableau to clean raw hospital claim l
 
 ## Quick Links
 * **Interactive Dashboard:** [View Live Healthcare Revenue Integrity Scorecard on Tableau Public](https://public.tableau.com/views/HealthcareRevenueIntegrityScorecard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-* **SQL Data Cleaning Script:** [Click here to view Healthcare_Revenue.sql](./Healthcare_Revenue.sql)
+* **SQL Data Cleaning Script:** [View Healthcare_Revenue.sql](./Healthcare_Revenue.sql)
 
 ## Data Source
 Original Dataset: https://www.kaggle.com/datasets/abuthahir1998/synthetic-healthcare-claims-dataset?resource=download&select=claim_data.csv
