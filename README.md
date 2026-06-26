@@ -3,10 +3,10 @@ Healthcare analytics project using SQL and Tableau to clean raw hospital claim l
 
 ## Quick Links
 * **Interactive Dashboard:** [View Live Healthcare Revenue Integrity Scorecard on Tableau Public](https://public.tableau.com/views/HealthcareRevenueIntegrityScorecard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-* **SQL Data Cleaning Script:** [Click here to view revenue_cycle_pipeline.sql](./revenue_cycle_pipeline.sql)
+* **SQL Data Cleaning Script:** [Click here to view Healthcare_Revenue.sql](./Healthcare_Revenue.sql)
 
 ## Data Source
-Original Dataset: 
+Original Dataset: https://www.kaggle.com/datasets/abuthahir1998/synthetic-healthcare-claims-dataset?resource=download&select=claim_data.csv
 
 ## The Challenge
 In hospital administration, revenue cycle management ensures that clinical services rendered are accurately documented, billed, and reimbursed without financial leakages. This project bridges the gap between clinical documentation and financial data by staging raw transactional claim logs, auditing billing anomalies, and delivering an interactive executive scorecard. This data process helps hospital administrators isolate root causes of revenue leakage, improve clinical coding accuracy, and optimize overall cash flow performance.
