@@ -118,8 +118,7 @@ FROM claims_staging;
 
 * **Revenue Stream Mix**
   * **Dashboard Function:** Tracks the percentage breakdown of total collected funds across Commercial (26.5%), Medicaid (26.5%), Self-Pay (25.0%), and Medicare (22.0%).
-
- 
- ## Dashboard Preview
-![Healthcare Revenue Integrity Scorecard](./Healthcare_Revenue_Dashboard.png)
   * **Business Utility:** Monitors overall financial risk exposure, highlighting that self-pay patients represent a substantial quarter of all successful collections.
+
+       ## Dashboard Preview
+![Healthcare Revenue Integrity Scorecard](./Healthcare_Revenue_Dashboard.png)
