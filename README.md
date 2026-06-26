@@ -108,15 +108,15 @@ FROM claims_staging;
 
 ## Dashboard Analysis & Business Utility
 
-* **Accounts Receivable Queue Partitioning**
+* **Accounts Receivable Workload by Status**
   * **Dashboard Function:** Breaks down the $297K outstanding balance into clear administrative statuses, color-coding each bucket by whether a manual intervention flag is active.
   * **Business Utility:** Gives operations managers a centralized view to filter down work volumes and divide stuck balances (ranging from $23K to $27K per category) among billing teams.
 
-* **Denial Root Cause Tracing**
+* **Top Reasons for Denied Claims**
   * **Dashboard Function:** Maps uncollected revenue leakage directly against front-end submission errors, pointing out specific drivers like "Authorization Not Obtained" ($3,529) and "Incorrect Billing Info" ($3,391).
   * **Business Utility:** Identifies exactly which front-end check processes need adjustment to stop preventable billing leaks before claims are submitted.
 
-* **Revenue Stream Mix**
+* **Revenue Breakdown by Payer Type**
   * **Dashboard Function:** Tracks the percentage breakdown of total collected funds across Commercial (26.5%), Medicaid (26.5%), Self-Pay (25.0%), and Medicare (22.0%).
   * **Business Utility:** Monitors overall financial risk exposure, highlighting that self-pay patients represent a substantial quarter of all successful collections.
 
