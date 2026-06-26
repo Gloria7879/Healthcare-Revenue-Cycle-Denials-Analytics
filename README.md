@@ -23,7 +23,7 @@ In hospital administration, revenue cycle management ensures that clinical servi
 ### Step 1: Base Inspection & Environment Setup
 * **Visual Audit:** Scanned the raw dataset in Excel to map column relationships and verify general data structure. 
 * **Staging Environment:** Created a structured `claims_staging` table with explicit, native database types (`DECIMAL`, `DATE`, `VARCHAR`) to protect original file integrity.
-* **Data Transformation during Ingest:** Populated the staging environment by cleaning text-based rows on the fly, applying `STR_TO_DATE` and `TRIM` to fix messy formatting into query-safe data types.
+* **Data Transformation:** Populated the staging environment by cleaning text-based rows on the fly, applying `STR_TO_DATE` and `TRIM` to fix messy formatting into query-safe data types.
 
 ```sql
 INSERT INTO claims_staging (
