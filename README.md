@@ -5,6 +5,9 @@ Healthcare analytics project using SQL and Tableau to clean raw hospital claim l
 * **Interactive Dashboard:** [View Live Healthcare Revenue Integrity Scorecard on Tableau Public](https://public.tableau.com/views/HealthcareRevenueIntegrityScorecard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 * **SQL Data Cleaning Script:** [View Healthcare_Revenue.sql](./Healthcare_Revenue.sql)
 
+  ## Dashboard Preview
+![Healthcare Revenue Integrity Scorecard](./Healthcare_Revenue_Dashboard.png)
+
 ## Data Source
 Original Dataset: https://www.kaggle.com/datasets/abuthahir1998/synthetic-healthcare-claims-dataset?resource=download&select=claim_data.csv
 
@@ -120,5 +123,3 @@ FROM claims_staging;
   * **Dashboard Function:** Tracks the percentage breakdown of total collected funds across Commercial (26.5%), Medicaid (26.5%), Self-Pay (25.0%), and Medicare (22.0%).
   * **Business Utility:** Monitors overall financial risk exposure, highlighting that self-pay patients represent a substantial quarter of all successful collections.
 
-       ## Dashboard Preview
-![Healthcare Revenue Integrity Scorecard](./Healthcare_Revenue_Dashboard.png)
