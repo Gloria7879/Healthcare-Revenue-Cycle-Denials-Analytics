@@ -23,7 +23,7 @@ In hospital administration, revenue cycle management ensures that clinical servi
 ### 1. Base Inspection & Environment Setup
 * **Visual Audit:** Scanned the raw dataset in Excel to map column relationships and verify general data structure. 
 * **Staging Environment:** Created a structured `claims_staging` table with explicit, native database types (`DECIMAL`, `DATE`, `VARCHAR`) to protect original file integrity.
-* **Data Transformation during Ingest:** Populated the staging environment by cleaning text-based rows on the fly, applying `STR_TO_DATE` and `TRIM` to fix messy formatting into query-safe data types.
+* **Data Transformation during Ingestion:** Populated the staging environment by cleaning text-based rows on the fly, applying `STR_TO_DATE` and `TRIM` to fix messy formatting into query-safe data types.
 
 ```sql
 INSERT INTO claims_staging (...)
@@ -53,7 +53,7 @@ SELECT * FROM duplicate_cte WHERE row_num > 1;
 
 ### 3. Data Cleansing & Text Standardization (Steps 2 & 3)
 * **Whitespace Scrubbing:** Temporarily adjusted the database parameters via `SQL_SAFE_UPDATES` to safely run a multi-column `TRIM` statement, removing hidden spaces from structural text rows (`insurance_type`, `claim_status`, etc.).
-* **Blank & Null Field Matrix:** Programmed conditional `SUM(CASE WHEN...)` matrices to scan clinical coding attributes and patient identification values for empty spaces, zeros, or hidden null strings.
+* **Blank & Null Fields:** Programmed conditional `SUM(CASE WHEN...)` matrices to scan clinical coding attributes and patient identification values for empty spaces, zeros, or hidden null strings.
 
 ```sql
 SELECT 
