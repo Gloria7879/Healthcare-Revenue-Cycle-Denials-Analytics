@@ -20,21 +20,21 @@ In hospital administration, revenue cycle management ensures that clinical servi
 
 ## The Process
 
-### 1. Base Inspection & Environment Setup
+### Step 1: Base Inspection & Environment Setup
 * **Visual Audit:** Scanned the raw dataset in Excel to map column relationships and verify general data structure. 
 * **Staging Environment:** Created a structured `claims_staging` table with explicit, native database types (`DECIMAL`, `DATE`, `VARCHAR`) to protect original file integrity.
-* **Data Transformation during Ingestion:** Populated the staging environment by cleaning text-based rows on the fly, applying `STR_TO_DATE` and `TRIM` to fix messy formatting into query-safe data types.
+* **Data Transformation during Ingest:** Populated the staging environment by cleaning text-based rows on the fly, applying `STR_TO_DATE` and `TRIM` to fix messy formatting into query-safe data types.
 
 ```sql
 INSERT INTO claims_staging (...)
 SELECT 
     `Claim ID`, `Provider ID`, `Patient ID`, 
     STR_TO_DATE(TRIM(`Date of Service`), '%m/%d/%Y'), 
-    `Billed Amount`, `Procedure Code` -- 
+    `Billed Amount`, `Procedure Code`
 FROM claim_data_raw;
 ```
 
-### 2. Duplicate Claim Auditing (Step 1)
+### Step 2: Duplicate Claim Auditing
 * **Encounter Volume Partitioning:** Built a Common Table Expression (CTE) utilizing `ROW_NUMBER()` to group transactions by matching patient attributes and transaction dates to pinpoint duplicate billing submission lag.
 * **Deep History Audits:** Isolated rows explicitly flagged with a 'Duplicate Claim' reason code and joined them back against patient history records to audit repeating billing errors.
 * **Aggregation by Payer:** Evaluated duplicate billing trends across different insurance networks using `COUNT` and `AVG` functions to isolate systemic billing problems.
@@ -51,9 +51,9 @@ WITH duplicate_cte AS (
 SELECT * FROM duplicate_cte WHERE row_num > 1; 
 ```
 
-### 3. Data Cleansing & Text Standardization (Steps 2 & 3)
+### Step 3: Data Cleansing & Text Standardization
 * **Whitespace Scrubbing:** Temporarily adjusted the database parameters via `SQL_SAFE_UPDATES` to safely run a multi-column `TRIM` statement, removing hidden spaces from structural text rows (`insurance_type`, `claim_status`, etc.).
-* **Blank & Null Fields:** Programmed conditional `SUM(CASE WHEN...)` matrices to scan clinical coding attributes and patient identification values for empty spaces, zeros, or hidden null strings.
+* **Blank & Null Field Matrix:** Programmed conditional `SUM(CASE WHEN...)` matrices to scan clinical coding attributes and patient identification values for empty spaces, zeros, or hidden null strings.
 
 ```sql
 SELECT 
@@ -62,7 +62,7 @@ SELECT
 FROM claims_staging;
 ```
 
-### 4. Financial Integrity Verification & Volume Audits (Steps 3 & 4)
+### Step 4: Financial Integrity Verification & Volume Audits
 * **Accounting Logic Rules:** Ran mathematical exception checks to isolate data anomalies where insurance networks paid more than allowed contract values, or where allowed parameters exceeded the original baseline hospital bills.
 * **Clinical Drivers Breakdown:** Aggregated system transaction counts by procedure codes to isolate and highlight primary clinical workload drivers.
 
@@ -74,7 +74,7 @@ WHERE paid_amount > allowed_amount
    OR allowed_amount > billed_amount;
 ```
 
-### 5. Final Metric Engineering & Tableau Production View (Step 5)
+### Step 5: Final Metric Engineering & BI Dashboard Production
 * **Calculated Feature Layout:** Structured an optimized database `VIEW` to serve clean data straight to Tableau without altering base staging tables. Embedded complex business math formulas to calculate insurance contract margins and tracking parameters.
 * **Division Error Handling:** Deployed the `NULLIF` parameter to protect reporting metrics from mathematical division-by-zero calculation breaks.
 
