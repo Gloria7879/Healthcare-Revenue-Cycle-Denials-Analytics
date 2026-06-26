@@ -115,10 +115,11 @@ FROM claims_staging;
 * **Denial Root Cause Tracing**
   * **Dashboard Function:** Maps uncollected revenue leakage directly against front-end submission errors, pointing out specific drivers like "Authorization Not Obtained" ($3,529) and "Incorrect Billing Info" ($3,391).
   * **Business Utility:** Identifies exactly which front-end check processes need adjustment to stop preventable billing leaks before claims are submitted.
- 
-    ## Dashboard Preview
-![Healthcare Revenue Integrity Scorecard](./Healthcare_Revenue_Dashboard.png)
 
 * **Revenue Stream Mix**
   * **Dashboard Function:** Tracks the percentage breakdown of total collected funds across Commercial (26.5%), Medicaid (26.5%), Self-Pay (25.0%), and Medicare (22.0%).
+
+ 
+ ## Dashboard Preview
+![Healthcare Revenue Integrity Scorecard](./Healthcare_Revenue_Dashboard.png)
   * **Business Utility:** Monitors overall financial risk exposure, highlighting that self-pay patients represent a substantial quarter of all successful collections.
