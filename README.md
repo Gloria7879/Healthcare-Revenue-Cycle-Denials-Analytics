@@ -2,7 +2,7 @@
 Healthcare analytics project using SQL and Tableau to clean raw hospital claim logs, find duplicate billing errors, and map out where a hospital is losing revenue to insurance denials.
 
 ## Quick Links
-* **Interactive Dashboard:** [View Live Healthcare Revenue Integrity Scorecard on Tableau Public](https://tableau.com)
+* **Interactive Dashboard:** [View Live Healthcare Revenue Integrity Scorecard on Tableau Public](https://public.tableau.com/views/HealthcareRevenueIntegrityScorecard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 * **SQL Data Cleaning Script:** [Click here to view revenue_cycle_pipeline.sql](./revenue_cycle_pipeline.sql)
 
 ## Data Source
