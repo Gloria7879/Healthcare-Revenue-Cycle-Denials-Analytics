@@ -30,7 +30,7 @@ INSERT INTO claims_staging (...)
 SELECT 
     `Claim ID`, `Provider ID`, `Patient ID`, 
     STR_TO_DATE(TRIM(`Date of Service`), '%m/%d/%Y'), 
-    `Billed Amount`, `Procedure Code` -- [Truncated for readability]
+    `Billed Amount`, `Procedure Code` -- 
 FROM claim_data_raw;
 ```
 
