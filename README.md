@@ -13,7 +13,7 @@ In hospital administration, revenue cycle management ensures that clinical servi
 
 ## Tools Used
 * **SQL (MySQL):** Window Functions (`ROW_NUMBER()`), Common Table Expressions (CTEs), Data Type Casting (`STR_TO_DATE`), String Cleansing (`TRIM`), Conditional Logic (`CASE WHEN`), Data Integrity Auditing, Views
-* **Tableau:** Data Visualization, Interactive Scorecards, Filter Actions, Drill-down Logic
+* **Tableau:** Data Visualization, Interactive Scorecards, Filter Actions
 * **Excel:** Initial Data Viewing
 
 ---
