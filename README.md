@@ -104,8 +104,9 @@ FROM claims_staging;
 ---
 
 ## Dashboard Key Performance Indicators (KPIs)
-* **Total Billed Amount:** $297,000  
-* **Total Collected Amount:** $220,754  
+* **Total Billed Amount:** $297,191
+* **Total Allowed Amount:** $223,112
+* **Total Collected Amount:** $200,754  
 * **Revenue Realization Rate:** 89.9%  
 
 ---
